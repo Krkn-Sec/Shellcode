@@ -1,0 +1,25 @@
+#-------------------------------------------------------------------------------#
+# Linux x64 Exit() Shellcode                                                    #
+# Description: Shellcode that calls the exit() function with exit status of '2' #
+# Author: Krkn                                                                  #
+#-------------------------------------------------------------------------------#
+
+Assembly:
+
+section .text
+global _start
+
+_start:
+        xor rax, rax
+        xor rdi, rdi
+        mov al, 60
+        mov dil, 2
+        syscall
+        
+        
+
+Opcode:
+
+buf   =    b""
+buf   +=   b"\x48\x31\xc0\x48\x31\xff\xb0"
+buf   +=   b"\x3c\x40\xb7\x02\x0f\x05"
