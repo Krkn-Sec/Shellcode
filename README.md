@@ -1,2 +1,2 @@
 # Shellcode
-Collection of shellcode manually generated.
+Collection of shellcode manually created.
